@@ -101,7 +101,10 @@ public class WeatherContract {
             Student: Fill in this buildWeatherLocation function
          */
         public static Uri buildWeatherLocation(String locationSetting) {
-            return null;
+            Uri weatherLocationQuery = CONTENT_URI.buildUpon().appendPath(locationSetting).build();
+
+
+            return weatherLocationQuery;
         }
 
         public static Uri buildWeatherLocationWithStartDate(
