@@ -107,9 +107,38 @@ public class ForecastFragment extends Fragment {
         weatherTask.execute(location);
     }
 
-    private long addLocation (String locationSetting, String cityName, double Lat, double Lon){
-        weath
-    }
+//    private long addLocation (String locationSetting, String cityName, double Lat, double Lon){
+//        Cursor cursor = getActivity().getContentResolver().query(
+//                WeatherContract.LocationEntry.CONTENT_URI,
+//                new String[]{
+//                        WeatherContract.LocationEntry._ID,
+//                        WeatherContract.LocationEntry.COLUMN_LOCATION_SETTING,
+//                        WeatherContract.LocationEntry.COLUMN_CITY_NAME,
+//                        WeatherContract.LocationEntry.COLUMN_COORD_LAT,
+//                        WeatherContract.LocationEntry.COLUMN_COORD_LONG
+//                },
+//                WeatherContract.LocationEntry.COLUMN_LOCATION_SETTING + " = ?",
+//                new String[]{locationSetting},
+//                null
+//                );
+//        if(cursor.moveToFirst()){
+//            return cursor.getLong(cursor.getColumnIndex("_id"));
+//        }
+//        else {
+//
+//            ContentValues testValues = new ContentValues();
+//            testValues.put(WeatherContract.LocationEntry.COLUMN_LOCATION_SETTING, locationSetting);
+//            testValues.put(WeatherContract.LocationEntry.COLUMN_CITY_NAME, cityName);
+//            testValues.put(WeatherContract.LocationEntry.COLUMN_COORD_LAT, Lat);
+//            testValues.put(WeatherContract.LocationEntry.COLUMN_COORD_LONG, Lon);
+//
+//            getActivity().getContentResolver().insert(
+//                    WeatherContract.LocationEntry.CONTENT_URI,testValues
+//
+//            );
+//        }
+//        return 0;
+//    }
 
     @Override
     public void onStart() {
